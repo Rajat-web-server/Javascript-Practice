@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <h1>Operator in JS</h1>
+
+    <script>
+        let x = 1;
+        x = -1;
+        console.log(x) //unary negation applied
+
+        let y = 3;
+        console.log(y-x);// binary minus subtracts values
+
+        //Remainder
+        console.log(5%2); // 5 divided by 2 and so on
+        console.log(55%2);
+        console.log(10%2);
+
+        //Exponentiation
+        console.log(4**3); //4 raises to the power of 3;
+        console.log(5**2/3);
+
+        /* String concatenation with binary */
+        let s = "string" + 'string';
+        console.log(s);
+        console.log('1'+1);
+        console.log(2+2+'1');
+        console.log('1'+2+3); //"122" and not "14
+
+        //The binary + is the only operator that supports strings in such a way. Other arithmetic operators work only with numbers and always convert their operands to numbers.
+        console.log('1'-'2');
+        console.log('2'/'2');
+
+        //Numeric Conversion, unary +
+        let z = 1;
+        console.log(+z)
+        let zz=-4;
+        console.log(+zz)
+        console.log(+true);
+        console.log(+"");
+        console.log(+"somethin");
+
+        let apples = '2'
+        let oranges = '3'
+        console.log(apples + oranges);//The binary plus would add them as strings:
+        console.log(+apples + +oranges);//both values are converted to numbers before adding them
+
+        //Assignment = returns a value
+        let dd=1;
+        let bb=2;
+        let cc=3-(dd=bb+1);
+        console.log(dd);
+        console.log(cc);
+
+        //Chaining Assignements
+        let q,w,e;
+        q=w=e=2+2;//Chained assignments evaluate from right to left
+        console.log(q);
+        console.log(w);
+        console.log(e);
+
+        e=8+2;
+        w=e;
+        q=e;
+        console.log(q);
+        console.log(w);
+        console.log(e);
+
+        //comma
+        let aa= (1+2,3+4);
+        console.log(aa);//Here, the first expression 1 + 2 is evaluated and its result is thrown away. Then, 3 + 4 is evaluated and returned as the result.
+
+        //Modify-in-place
+        let n =2;
+        n+=7;
+        n*=3;
+        console.log(n);
+
+        //Increment/decrement
+        let counter =1;
+        let a = ++counter;
+        console.log(a);
+
+        a=counter++;
+        console.log(a);//returns 2
+
+    </script>
+</body>
+</html>

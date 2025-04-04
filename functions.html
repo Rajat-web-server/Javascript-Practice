@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+    <h1>javascript Function</h1>
+    <p>Using a function as a variable</p>
+     <p id="demo"></p>
+
+     <script>
+        function tocelsius(f){
+            return (5/9) * (f-32);
+        }
+        let result = tocelsius(45);
+       /*  document.getElementById('demo').innerHTML=result; */
+
+       let text= "The Temperature is "+ tocelsius(99) +" celsius. ";
+       document.getElementById('demo').innerHTML=text;
+     </script>
+   
+</body>
+</html>
