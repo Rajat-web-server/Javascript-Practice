@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <h2>String Practice</h2>
+
+    <script>
+        const String = 'the revoution will be Televised.';
+        console.log(String);
+        const string1 = String;
+        console.log(string1);
+
+        const backtick = `backtick`;//for template literal
+        console.log(backtick);
+
+        const name = "Sam";
+        const greeting = `hello, the guy named ${name}`;
+        console.log(greeting);
+
+        const one = "hello, ";
+        const two = "how are you!! ";
+        const three = `${one}${two}`;
+        console.log(three);
+
+        const s1 = "Hello ";
+        const s2 = "chris";
+        console.log(s1 + s2);
+
+        //Or
+
+        const greetings1 = "hello";
+        const name1 = "Chris";
+        console.log(`${greetings1}, ${name1}`);
+
+        //multiline strings
+
+        const newline = `One day you finally knew
+what you had to do, and began,`;
+        console.log(newline);
+
+        const newline1=`one day \nanother day`;
+        console.log(newline1);
+
+        //number and string
+
+        const n1 = "fornt";
+        const number = 222;
+        console.log (n1 + number);
+
+        const mystring = `123`;
+        const mynum = Number(mystring);
+        console.log(typeof mynum);
+
+        //conversely
+
+        const mynum2=123;
+        const mystring2= String(mynum2);
+        console.log(typeof mystring2);
+
+
+    </script>
+</body>
+
+</html>
