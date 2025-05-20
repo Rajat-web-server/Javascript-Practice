@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logical Operators</title>
 </head>
+
 <body>
     <h2>Logical Operators like Or(||), And (&&), Not(??)</h2>
 
@@ -34,46 +36,57 @@
      */
 
 
-    // &&
+        // &&
 
-        console.log(true&&true);
-        console.log(true&&false);
-        console.log(false&&false);
+        console.log(true && true);
+        console.log(true && false);
+        console.log(false && false);
 
         let hour = 12;
         let minute = 30;
 
-        if (hour == 12 && minute == 30)
-    {
-        console.log('The time is 12:30');
-    }
-   //Both conditions should be true here
+        if (hour == 12 && minute == 30) {
+            console.log('The time is 12:30');
+        }
+        //Both conditions should be true here
 
-   console.log(!!"non-empty string");
-
-
-   //Conditional Operator
-
-   let a;
-   let age =prompt('How old are you ?, ');
-
-   if (age>18)
-   {
-    a=true;
-   }
-   else{
-    a=false;
-   }
-   console.log(a);
+        console.log(!!"non-empty string");
 
 
-   //Now using conditional operator
-   //let result = condition ? value1 : value2;
-   let age1 =prompt('How old are you ?, ');
-   let b=(age1>18) ? true :false;
-   console.log (b);
+        //Conditional Operator
+
+        let a;
+        let age = prompt('How old are you ?, ');
+
+        if (age > 18) {
+            a = true;
+        }
+        else {
+            a = false;
+        }
+        console.log(a);
+
+
+        //Now using conditional operator
+        //let result = condition ? value1 : value2;
+        let age1 = prompt('How old are you ?, ');
+        let b = (age1 > 18) ? true : false;
+        console.log(b);
+
+        //Switch case
+
+        let a1 = "1";
+        let b1 = 0;
+
+        switch (+a1) {
+            case b1 + 1:
+                console.log("this runs, becasue +a is 1, exactly equals b+1")
+            default :
+            console.log("This doesn't run");
+        }
 
     </script>
-    
+
 </body>
+
 </html>
