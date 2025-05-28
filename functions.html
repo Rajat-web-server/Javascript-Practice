@@ -8,19 +8,45 @@
 <body>
     
     <h1>javascript Function</h1>
-    <p>Using a function as a variable</p>
-     <p id="demo"></p>
+   <script>
+    function show()
+    {   //function declaration
+        console.log("Hello Everyone");
+    }
+    function name (number)
+    {
+        console.log("hello "+number);
+    }
 
-     <script>
-        function tocelsius(f){
-            return (5/9) * (f-32);
-        }
-        let result = tocelsius(45);
-       /*  document.getElementById('demo').innerHTML=result; */
+    /* show();
+    name(1); */
 
-       let text= "The Temperature is "+ tocelsius(99) +" celsius. ";
-       document.getElementById('demo').innerHTML=text;
-     </script>
+    //Local variable
+    function showMessage()
+    {
+        let message="hello, I'm javascript!";//local
+        console.log(message);
+    }
+    showMessage();
+    /* console.log(message);//  The variable is local to the function!! */
+
+    //Outer Variable
+
+    let userName = "john"; //global
+    function showMessage2()
+    {
+        userName="chris"
+        let message2="hello, "+ userName ;
+        console.log(message2);
+    }
+    
+    showMessage2();
+    console.log(userName);
+
+    
+
+
+   </script>
    
 </body>
 </html>
