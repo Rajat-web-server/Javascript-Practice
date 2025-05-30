@@ -1,52 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions</title>
 </head>
+
 <body>
-    
+
     <h1>javascript Function</h1>
-   <script>
-    function show()
-    {   //function declaration
-        console.log("Hello Everyone");
-    }
-    function name (number)
-    {
-        console.log("hello "+number);
-    }
+    <script>
+        function show() {   //function declaration
+            console.log("Hello Everyone");
+        }
+        function name(number) {
+            console.log("hello " + number);
+        }
 
-    /* show();
-    name(1); */
+        /* show();
+        name(1); */
 
-    //Local variable
-    function showMessage()
-    {
-        let message="hello, I'm javascript!";//local
-        console.log(message);
-    }
-    showMessage();
-    /* console.log(message);//  The variable is local to the function!! */
+        //Local variable
+        function showMessage() {
+            let message = "hello, I'm javascript!";//local
+            console.log(message);
+        }
+        showMessage();
+        /* console.log(message);//  The variable is local to the function!! */
 
-    //Outer Variable
+        //Outer Variable
 
-    let userName = "john"; //global
-    function showMessage2()
-    {
-        userName="chris"
-        let message2="hello, "+ userName ;
-        console.log(message2);
-    }
-    
-    showMessage2();
-    console.log(userName);
+        let userName = "john"; //global
+        function showMessage2() {
+            userName = "chris"
+            let message2 = "hello, " + userName;
+            console.log(message2);
+        }
 
-    
+        showMessage2();
+        console.log(userName);
 
+        //Parameterrs
 
-   </script>
-   
+        function showMessage3(from, text) {
+            console.log(from + ' : ' + text);
+        }
+        showMessage3("chris", "hello");
+        showMessage3("Sam", "Yeah, hii");
+
+        //Default values
+
+        function showMessage4(from, text = "no text given")//default value given to text
+        {
+            console.log(from + " : " + text);
+        }
+        showMessage4('Ann', undefined);
+        //The default value also jumps in if the parameter exists, but strictly equals undefined, like this:
+
+        //Returning a Value
+
+        function sum(a, b) {
+            return a + b;
+        }
+        /* console.log(sum(2,9)); */
+        let result = sum(1, 10);
+        console.log(result);
+
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+            }
+            else {
+                return consfirm('Go ask your parents!!');
+            }
+        }
+
+        let age = prompt('How old are you?', 18);
+
+        if (checkAge(age)) {
+            console.log('Access granted');
+        } else {
+            console.log('Access denied');
+        }
+
+    </script>
+
 </body>
+
 </html>
