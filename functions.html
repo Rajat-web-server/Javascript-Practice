@@ -67,22 +67,42 @@
         let result = sum(1, 10);
         console.log(result);
 
-        function checkAge(age) {
-            if (age >= 18) {
-                return true;
-            }
-            else {
-                return consfirm('Go ask your parents!!');
-            }
+        /*  function checkAge(age) {
+             if (age >= 18) {
+                 return true;
+             }
+             else {
+                 return consfirm('Go ask your parents!!');
+             }
+         }
+ 
+ 
+         let age = prompt('How old are you?', 18);
+ 
+         if (checkAge(age)) {
+             console.log('Access granted');
+         } else {
+             console.log('Access denied');
+         } */
+
+        //Fucntion Expression
+
+        let sum1 = function (a, b) {
+            return a + b;
+        };
+        let result1=sum1(5,9);
+        console.log(result1)
+
+        function sayHi() {
+            console.log("Hello");
         }
 
-        let age = prompt('How old are you?', 18);
+        console.log(sayHi);
+        //The code above shows its string representation, which is the source code.
 
-        if (checkAge(age)) {
-            console.log('Access granted');
-        } else {
-            console.log('Access denied');
-        }
+        let func = sayHi;
+        func();
+        //there are no parentheses after sayHi. If there were, then func = sayHi() would write the result of the call sayHi() into func, not the function sayHi itself.
 
     </script>
 
