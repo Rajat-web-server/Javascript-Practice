@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loop</title>
 </head>
+
 <body>
-    
+    <h2>Loops</h2>
+    <script>
+        //While loop
+        function loop1() {
+            let i = 0;
+            while (i < 10) {
+                console.log(i);
+                i++;
+            }
+        }
+
+        //do-while loop
+
+        function loop2() {
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            }
+            while (i < 10);
+        }
+
+        //for loop
+        function loop3() {
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+            }
+        }
+
+        //skipping parts
+        let i = 0;
+        function loop4() {
+            for (; i < 3; i++) {
+                console.log(i);
+            }
+        }
+
+        function loop5() {
+            for (; i < 5;) {
+                console.log(i++);
+            }
+        }
+
+        function loop6() {
+            //It creates infintiy loop
+            for (; ;) {
+
+            }
+        }
+
+        //Breaking the loop
+        let sum = 0;
+        function break_()
+        {
+            while (true) {
+
+                let value = +prompt("Enter a number", '');
+
+                if (!value) break; // (*)
+
+                sum += value;
+
+            }
+            console.log("Sum : " + sum);
+        }
+        //if the user enters an empty line or cancels the input. It stops the loop immediately, passing control to the first line after the loop. 
+        //“infinite loop + break as needed”
+
+        //Continue to the next iteration
+
+        function loop7()
+        {
+            for (let i = 0;i<15;i++)
+        {
+            if (i%2==0) 
+            continue;
+        console.log(i);
+        }
+        }
+        //It's like break but it just skip the looping according to the condition and doesn't skip the actual code;
+        
+        loop7();
+
+
+
+
+
+    </script>
 </body>
+
 </html>
