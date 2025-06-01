@@ -60,8 +60,7 @@
 
         //Breaking the loop
         let sum = 0;
-        function break_()
-        {
+        function break_() {
             while (true) {
 
                 let value = +prompt("Enter a number", '');
@@ -78,19 +77,51 @@
 
         //Continue to the next iteration
 
-        function loop7()
-        {
-            for (let i = 0;i<15;i++)
-        {
-            if (i%2==0) 
-            continue;
-        console.log(i);
-        }
+        function loop7() {
+            for (let i = 0; i < 15; i++) {
+                if (i % 2 == 0)
+                    continue;
+                console.log(i);
+            }
         }
         //It's like break but it just skip the looping according to the condition and doesn't skip the actual code;
-        
-        loop7();
 
+
+        //labels for break/continue
+
+        function loop8() {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    let input = prompt(`Value at coords(${i},${j})`, " ");
+                    // what if we want to exit from here to Done (below)?
+                }
+            }
+        }
+
+
+        console.log('Done!')
+
+        function loop9() {
+            outer: for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; J++) {
+                    let input = prompt(`Value at coords(${i},${j})`, " ");
+                    if (!input) break outer;
+                }
+            }
+        }
+
+        console.log("Done!!");
+
+        function loop10() {
+          nextPrime :  for (let i = 2; i < 100; i++) {
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) 
+                    continue nextPrime;
+                }
+                console.log(i);
+            }
+        }
+        loop10();
 
 
 
