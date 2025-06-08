@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
 </head>
+
 <body>
-    
+    <h2>Array</h3>
+        <script>
+            function array1() {
+                let fruits = ['Apple', 'orange', 'Mango', 'Cherry'];
+                console.log(fruits);
+                console.log(fruits[2]);
+                fruits[4] = 'Banana';
+                console.log(fruits)
+                console.log(fruits.length);
+            }
+
+            //Mix of values
+            function array2(){ 
+            let arr = ['Apple', {name: 'John'},true, function(){console.log('Hello World')}];
+
+            console.log(arr);
+            console.log(arr[1].name);
+            arr[3]();
+            }
+
+            //getting to last elements
+            function last_elements() 
+            {
+              let char=['a','b','c'];
+            console.log(char[char.length-1]);  
+            }
+
+            //Methods pop/push, shift/unshift
+            function methods()
+            {
+               let char =['a','b','c','d'];
+            console.log(char.pop());//removes the last element from the array;
+            console.log(char);
+            char.push('d');//it appends an element at the end;
+            console.log(char);
+
+            char.shift();
+            console.log(char);//removes the first element
+            char.unshift('a');
+            console.log(char);//Adds the first element
+
+            let char_1=[1,2,3,4,5];
+            console.log(char_1);
+            char_1.push(6,7);
+            char_1.unshift(-1,0);
+            console.log(char_1); 
+            }
+
+            //Array is a special kind of object
+            //Methods push/pop run fast, while shift/unshift are slow.
+            
+            
+
+        </script>
 </body>
+
 </html>
