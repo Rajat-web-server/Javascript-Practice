@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="demo">hello world</h1>
+    <p>this is a paragraph</p>
+    <div id="container">
+
+    </div>
+
+    <button id="clickMe">
+        Click me!!
+    </button>
+    <p id="result"> </p>
+
+    <script>
+        // Accessing Elements
+        let element = document.getElementById("demo");
+        console.log(element);
+
+        //Changing content
+        element = document.getElementById("demo").innerHTML = "Hello, DOM!";
+        console.log(element);
+
+        //Changing style
+        document.getElementById("demo").style.color = "blue";
+
+        //Creating new Elements
+        let new_ = document.createElement('p');
+        new_.innnertext = "New Paragraph";
+        document.getElementById('container').appendChild(new_);
+        console.log(new_);
+
+        //Event handling
+        document.getElementById("clickMe").addEventListener('click', function () {
+            document.getElementById("result").innerText='Button Clicked';
+        }
+    );
+
+
+    </script>
+</body>
+
+</html>
