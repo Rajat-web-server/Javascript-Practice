@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="h">This is h1 tag</h1>
+    <p id="para">This is a Paragraph Tag</p>
+    <h3 style="background-color: red;">The Background color is here</h3>
+
+    <button>Click me</button>
+
+    <script>
+        /*  
+         document.title='Change'; //changes the literal title;
+         document.write("This is written under script-tag");
+         const name = prompt("What's your name ?")
+        /*  alert('Welcome ' + name); */
+        /* document.write('Welcome ' + name);  */
+
+
+        //Querry slector therough---> tag name, id, class
+        const content = document.querySelector("p");
+        content.innerHTML="<h1>something changed</h1>"
+        console.log(content.innerHTML);
+
+
+
+    </script>
+</body>
+
+</html>
