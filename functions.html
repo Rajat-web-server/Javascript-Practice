@@ -104,6 +104,17 @@
         func();
         //there are no parentheses after sayHi. If there were, then func = sayHi() would write the result of the call sayHi() into func, not the function sayHi itself.
 
+        //Arrow Functions
+        const hello = () => {
+            console.log("Hello world");
+        }
+        hello();
+
+        const addition = (a,b) => { 
+            //If you don't use parantheses the statement automatically returns itself--> for one liners
+            return a+b ;
+        }
+        console.log(addition(9,10));
     </script>
 
 </body>

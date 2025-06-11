@@ -9,25 +9,50 @@
 
 <body>
     <h1 class="h">This is h1 tag</h1>
-    <p id="para">This is a Paragraph Tag</p>
-    <h3 style="background-color: red;">The Background color is here</h3>
+    <h1>This is the first H1 tag</h1>
+    <p id="para">This is a <span id="other">Paragraph Tag</span></p>
+    <h3 class="h", style="background-color: red;">The Background color is here</h3>
 
     <button>Click me</button>
 
     <script>
-        /*  
-         document.title='Change'; //changes the literal title;
-         document.write("This is written under script-tag");
-         const name = prompt("What's your name ?")
-        /*  alert('Welcome ' + name); */
-        /* document.write('Welcome ' + name);  */
+
+        function document_() {
+            document.title = 'Change'; //changes the literal title;
+            document.write("This is written under script-tag");
+            const name = prompt("What's your name ?")
+            alert('Welcome ' + name);
+            document.write('Welcome ' + name);
+        }
+
+        function h1_() {
+            //Querry slector therough---> tag name, id, class
+            //It selects the first element
+            const content = document.querySelector("h1");
+            content.innerHTML = "<h1>something changed</h1>"
+            console.log(content.innerHTML);
+        }
 
 
-        //Querry slector therough---> tag name, id, class
-        const content = document.querySelector("p");
-        content.innerHTML="<h1>something changed</h1>"
-        console.log(content.innerHTML);
+        function change_() {
+            const change = document.querySelector("button");
+            change.innerHTML = "<h1>Don't click</h1>"
+            console.log(change);
+        }
 
+        function id_() {
+            let id = document.querySelector("#other");
+            console.log(id);
+            id.innerText = "<h1>John Doe</h1>" //If there are no tags used then use 'innerText' - If you write code in this it will still consider it as a text.  
+        }
+
+        let classs = document.querySelector(".h")
+        console.log(classs.children)
+        console.log(classs.parentElement.children)
+        classs.forEach(e=> {
+            console.log(classs)
+            
+        });
 
 
     </script>
