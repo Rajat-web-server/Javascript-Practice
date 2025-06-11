@@ -46,13 +46,12 @@
             id.innerText = "<h1>John Doe</h1>" //If there are no tags used then use 'innerText' - If you write code in this it will still consider it as a text.  
         }
 
-        let classs = document.querySelector(".h")
-        console.log(classs.children)
-        console.log(classs.parentElement.children)
-        classs.forEach(e=> {
-            console.log(classs)
-            
-        });
+        let classs = document.querySelectorAll(".h")
+        /* console.log(classs.children)
+        console.log(classs.parentElement.children) */
+        classs.forEach( (e)=> {
+            console.log(e.innerHTML);
+        })
 
 
     </script>
