@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">hello</h1>
+    <p id="paragraph">My name is Soe Don</p>
+    <div id="h3_">
+        <h3>
+            something's written here
+        </h3>
+    </div>
+    <button id="button">click Please</button>
+
+    <style>
+        .color_{
+            background-color: aquamarine;
+        }  
+
+        .para{
+            text-align: center;
+            font-size: 25px;
+            background-color: blue;
+        }
+        .h3_{
+            text-align: right;
+            padding: 20px;
+            background-color: cornflowerblue;
+        }
+
+        .button{
+            padding: 25px;
+            background-color: chartreuse;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script>
+        const el_1 = document.getElementById("hello")
+        console.log(el_1);
+        el_1.innerHTML= "Not hello"
+        el_1.classList.add('color_', 'para')
+
+        let el_2= document.getElementById("paragraph")
+        console.log(el_2);
+        el_2.classList.add("color_")
+
+        let some = document.getElementById("h3_");
+        console.log(some);
+        some.classList.add("color_");
+        
+    </script>
+</body>
+</html>
