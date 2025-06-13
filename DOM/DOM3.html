@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="hello">hello</h1>
+    <h1 class="group" id="hello">hello</h1>
     <p id="paragraph">My name is Soe Don</p>
     <div id="h3_">
         <h3>
@@ -16,8 +16,10 @@
     <button id="button">click Please</button>
 
     <div>
-        <h3 class="inlineStyle" id="inline">Inline css</h3>
+        <h3  class="group inlineStyle" id="inline">Inline css</h3>
     </div>
+
+    <h4 class="group" >This line comes under group</h4>
 
     <style>
         .color_{
@@ -79,6 +81,15 @@
         /* some.remove(); */
         /* It removes the whole element from DOM */
 
+        //DOM Manipulation using getElementsByClassName::::::
+
+        const group = document.getElementsByClassName("group")
+        console.log(group);
+        for(let i=0; i<=group.length;i++)
+    {
+        group.item(i).style.backgroundColor="red";
+        /* group.item(i).remove(); */
+    }
         
     </script>
 </body>
