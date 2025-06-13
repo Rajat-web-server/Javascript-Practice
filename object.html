@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object</title>
 </head>
+
 <body>
     <h1>Javascript Object</h1>
-    <h2>Creating an Object</h2>
 
     <p id="demo"></p>
 
     <script>
 
         const person = {
-            firstname : 'John',
-            lastname : 'Doe',
-            age : 22
+            name: "Alice",
+            age: 25,
+            isStudent: false,
+            course: "Bsc"
         };
 
-        const x = person;
-        x.age = 23;
-        document.getElementById('demo').innerHTML=person.age;
+        /*  console.log(person.name);
+         console.log(person.age);
+         console.log(person.isStudent);
+         console.log(person.course); */
+
+        /* Through dot operator it can be accesed;
+ */
+
+        person.age = 33;
+
+        console.log(person.age);
+        delete person.isStudent;
+        console.log(person);
+
+     //bracket notation
+        console.log(person["name"]);
+
+        function printProperty(obj, propName)
+        {
+            console.log(obj[propName]);
+        }
+
+        const car = {brand: "Toyota", model: "Camry"};
+        printProperty(car, "brand");
+        printProperty(car, "model");
+
+        const el ={
+            theme:{
+                "background-color": "blue"
+            }
+        };
+
+        const key = "background-color";
+        console.log(el.theme[key]);
 
     </script>
 </body>
+
 </html>
