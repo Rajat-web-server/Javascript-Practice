@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventListener</title>
+</head>
+<body>
+    
+    <h2>Welcome to this website</h2>
+
+    <h1 id="hello">hello, to everyone</h1>
+
+    <div>
+        <h3>
+            Nothing is here much
+        </h3>
+        <h3>
+            will Provide code afterwards
+        </h3>
+    </div>
+
+    <h3 onclick="handleClick()">
+        Click the button to get code
+    </h3>
+
+   <!--  <button onclick="console.log('Here is the code')">click</button> -->
+     <!-- one of the ways to handle onclick event -->
+
+     <!-- <button onclick="handleClick()"">
+        <h3>Click</h3>
+     </button> -->
+     <!-- one of the ways to handle onclick event -->
+
+     <button id="click">
+        <h3>
+            click
+        </h3>
+     </button>
+
+     <div id="container"></div>
+     
+
+     <button id="clickButton">Click Me</button>
+     
+
+     <script>
+        function handleClick()
+        {
+            console.log('This is the code');
+        }
+
+        const element = document.getElementById("click");
+
+        /* element.onclick= () => {
+            console.log("Here is the code");
+            
+        } */
+        //if this is overriden by other script tag then the latest code will be executed\
+        
+
+        /* here the overriden as well this code will be executed in this case */
+        element.addEventListener("click", ()=> {
+            let hello_= document.getElementById("hello");
+            console.log(hello_);
+            hello_.style.backgroundColor="black";
+            hello_.style.padding="25px";
+            hello_.style.color="white";
+            hello_.style.textAlign="center";
+            hello_.style.border="2px red solid";
+            hello_.style.fontSize="50px";
+        })
+
+       /*  const allChildren = document.querySelector("body").children;
+
+        for (let i=0;i<allChildren.length;i++)
+        {
+            allChildren.item(i).addEventListener("click",() => {
+                allChildren.item(i).remove();
+            })
+        } */
+
+        const container_=document.getElementById("container");
+        const button_=document.getElementById("clickButton");
+
+        let numb = 1;
+
+        button_.addEventListener("click", () => {
+            const el = document.createElement("h1");
+            el.innerText=numb;
+            container_.appendChild(el);
+            numb++
+            
+        });
+
+
+     </script>
+
+</body>
+</html>
