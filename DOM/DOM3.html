@@ -15,6 +15,10 @@
     </div>
     <button id="button">click Please</button>
 
+    <div>
+        <h3 class="inlineStyle" id="inline">Inline css</h3>
+    </div>
+
     <style>
         .color_{
             background-color: aquamarine;
@@ -36,6 +40,11 @@
             background-color: chartreuse;
             border: 2px solid black;
         }
+
+        .inlineStyle
+      {
+        background-color: cornflowerblue; padding: 25px; text-align: center;
+      }
     </style>
 
     <script>
@@ -51,6 +60,25 @@
         let some = document.getElementById("h3_");
         console.log(some);
         some.classList.add("color_");
+        
+        let el_3 = document.getElementById("button");
+        console.log(el_3);
+        el_3.classList.add("button")
+
+        let el_4 = document.getElementById("inline");
+        el_4.classList.remove("inlineStyle");
+        el_4.style.backgroundColor="grey";
+        el_4.style.color="white";
+        el_4.style.padding="25px";
+        el_4.style.textAlign="center";
+        console.log(el_4.parentElement) ;
+        
+        some.parentElement.style.backgroundColor="blue";
+
+        some.setAttribute('some','23');
+        /* some.remove(); */
+        /* It removes the whole element from DOM */
+
         
     </script>
 </body>
