@@ -25,14 +25,22 @@
             display: flex;
             flex-direction: column;
             align-content: space-around;
+            gap: 20px;
+        }
+        .butts>button{
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bolder;
+
         }
     </style>
 </head>
 
 <body>
     
-    <div class="butts"><button id="add">Add Element</button>
-        <button id="insert">Insert at Start & Before Title</button>
+    <div class="butts">
+    <button id="add">Add Element</button>
+    <button id="insert">Insert at Start & Before Title</button>
     <button id="replace">Replace First Item</button>
     <button id="clone">Clone List</button>
     <button id="delete">Delete Last Item</button>
